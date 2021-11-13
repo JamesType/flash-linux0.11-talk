@@ -66,14 +66,14 @@ LIBS	=lib/lib.a
 	$(CC) $(CFLAGS) \
 	-nostdinc -Iinclude -c -o $*.o $<
 
-all:	Boot.img
+all: boot.img
 
 KERNEL_FILE = tools/system.bin
 
 tools/system.bin : tools/system.exe 
-	tools/Trans.exe tools/System.exe tools/system.bin
+	tools/trans.exe tools/system.exe tools/system.bin
 	
-Boot.img: boot/bootsect.bin boot/setup.bin $(KERNEL_FILE) tools/build.exe Makefile
+boot.img: boot/bootsect.bin boot/setup.bin $(KERNEL_FILE) tools/build.exe Makefile
 #	objcopy -O binary -R .note -R .comment tools/system tools/kernel
 	tools\build.exe boot/bootsect.bin boot/setup.bin $(KERNEL_FILE) $(ROOT_DEV)
 #	rm tools/kernel -f
@@ -83,8 +83,8 @@ Boot.img: boot/bootsect.bin boot/setup.bin $(KERNEL_FILE) tools/build.exe Makefi
 disk: Image
 	dd bs=8192 if=Image of=/dev/fd0
 
-tools/build.exe: tools/build.c
-	$(CC) $(CFLAGS)	-o tools/build tools/build.c
+#tools/build.exe: tools/build.c
+#	$(CC) $(CFLAGS)	-o tools/build tools/build.c
 
 boot/head.o: boot/head.s
 	gcc -I./include -traditional -c boot/head.s -o boot/head.o
@@ -98,7 +98,7 @@ tools/system.exe:	boot/head.o init/main.o \
 	$(MATH) \
 	$(LIBS) \
 	-o tools/system.exe >system.map
-#	nm tools/system | grep -v '\(compiled\)\|\(\.o$$\)\|\( [aU] \)\|\(\.\.ng$$\)\|\(LASH[RL]DI\)'| sort > System.map 
+#	nm tools/system | grep -v '\(compiled\)\|\(\.o$$\)\|\( [aU] \)\|\(\.\.ng$$\)\|\(LASH[RL]DI\)'| sort > system.map 
 
 kernel/math/math.a:kernel/math/math_emulate.o
 #	(cd kernel/math ; make)
@@ -143,14 +143,14 @@ tmp.s:	boot/bootsect.s tools/system
 	cat boot/bootsect.s >> tmp.s
 
 clean:
-#	rm -f Image System.map tmp_make core boot/bootsect boot/setup
+#	rm -f Image system.map tmp_make core boot/bootsect boot/setup
 #	rm -f init/*.o tools/system tools/build boot/*.o
 #	(cd mm;make clean)
 #	(cd fs;make clean)
 #	(cd kernel;make clean)
 #	(cd lib;make clean)
-	@del /S /Q *.a *.o system.map tools\system.exe
-#	del Image System.map tmp_make core boot\bootsect boot\setup
+	@del /S /Q *.a *.o *.bin *.disasm boot.img bochsout.txt system.map tools\system.exe kernel\traps.s kernel\chr_drv\tty_ioctl.s
+#	del Image system.map tmp_make core boot\bootsect boot\setup
 #	del init\*.o tools\system tools\build boot\*.o
 #	(cd mm & make clean)
 #	(cd fs & make clean)

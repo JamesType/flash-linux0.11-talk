@@ -6,10 +6,10 @@
 megs: 32
 
 # filename of ROM images
-romimage: file=$BXSHARE/BIOS-bochs-latest
-vgaromimage: file=$BXSHARE/VGABIOS-elpin-2.40
+romimage: file=$BXSHARE/BIOS-bochs-latest, address=0xf0000
+vgaromimage: $BXSHARE/VGABIOS-elpin-2.40
 
-# what disk images will be used 
+# what disk images will be used
 floppya: 1_44=boot.img, status=inserted
 floppyb: 1_44=rootimage-0.11.img, status=inserted
 ata0-master: type=disk, path="hdc-0.11.img", mode=flat, cylinders=121, heads=16, spt=63

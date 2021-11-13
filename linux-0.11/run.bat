@@ -1,4 +1,4 @@
-@set path=MinGW32\bin;%path%
+@set path=MinGW32\bin;..\MinGW32\bin;..\..\MinGW32\bin;%path%
 
 make
 

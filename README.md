@@ -13,6 +13,8 @@
 
 **发文时间**：每周一和每周四
 
+**互动方式**：微信群（关注公众号并回复“os”）
+
 **开篇词**：[闪客新系列！你管这破玩意叫操作系统源码](https://mp.weixin.qq.com/s/tvbkGLfhDq03xxM-FZ4zuA)
 
 **一些非必须的资料**：[资料包](https://github.com/sunym1993/flash-linux0.11-talk/tree/main/%E4%B8%80%E4%BA%9B%E9%9D%9E%E5%BF%85%E8%A6%81%E7%9A%84%E8%B5%84%E6%96%99)
@@ -59,6 +61,7 @@
    * [第14回 中断初始化 trap_init](https://mp.weixin.qq.com/s/sFp_388qRncB-jpJeRzCGQ)
    * [第15回 块设备请求项初始化 blk_dev_init](https://mp.weixin.qq.com/s/pIbVY1XPCktxGogc4lI1Bw)
    * [第16回 控制台初始化 tty_init](https://mp.weixin.qq.com/s/yIrzEWUUuZC9OsiuU_lOaw)
+   * [第17回 时间初始化 time_init](https://mp.weixin.qq.com/s/y26MMfj8pP5PmbKDZBT5-A)
 
 * **第三部分：一个新进程的诞生**
 

@@ -15,6 +15,8 @@
 
 **互动方式**：微信群（关注公众号并回复“os”）
 
+**创作番外故事**：[知识星球](https://mp.weixin.qq.com/s/NFUgJ4-hIyrs1sQr8AUCvA)
+
 **开篇词**：[闪客新系列！你管这破玩意叫操作系统源码](https://mp.weixin.qq.com/s/tvbkGLfhDq03xxM-FZ4zuA)
 
 **一些非必须的资料**：[资料包](https://github.com/sunym1993/flash-linux0.11-talk/tree/main/%E4%B8%80%E4%BA%9B%E9%9D%9E%E5%BF%85%E8%A6%81%E7%9A%84%E8%B5%84%E6%96%99)
@@ -72,6 +74,7 @@
    * [第21回 新进程诞生全局概述](https://mp.weixin.qq.com/s/H_OCZ2ZtGHWHge_rYKCkJw)
    * [第22回 从内核态切换到用户态](https://mp.weixin.qq.com/s/AVl6R2N9d_sldkhfvC6aEw)
    * [第23回 如果让你来设计进程调度](https://mp.weixin.qq.com/s/Sf9vV7RCnVDlBKXx5jXs1Q)
+   * [第24回 从一次定时器滴答来看进程调度](https://mp.weixin.qq.com/s/yFre8Qv_ZCtjRkTS49n6rw)
 
 * **第四部分：shell 程序的到来**
 
